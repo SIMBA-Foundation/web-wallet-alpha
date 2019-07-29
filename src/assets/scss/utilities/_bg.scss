@@ -1,0 +1,49 @@
+/*=========== Background Utilities ==========*/
+
+.gradient-primary {
+    background: $light-primary;
+    * {
+        color: $light;
+    }
+}
+
+.gradient-success {
+    background: $light-success;
+    * {
+        color: $light;
+    }
+}
+
+.gradient-pink {
+    background: $light-pink;
+    * {
+        color: $light;
+    }
+}
+
+.gradient-warning {
+    background: $light-warning;
+    * {
+        color: $light;
+    }
+}
+
+.gradient-purple {
+    background: $light-purple;
+    * {
+        color: $light;
+    }
+}
+
+.grayish-blue {
+    background-color: $gray-dark !important;
+}
+
+.aqua-bg {
+    background-color: $aqua-bg;
+}
+
+// Simple Brand Background Color
+@each $color, $value in $theme-colors {
+    @include bg-variant(".bg-#{$color}", $value);
+}

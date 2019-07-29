@@ -1,0 +1,11 @@
+.DS_Store
+.project
+.vscode
+.idea
+**/.sass-cache/*
+.compass.pid
+.sass-cache
+node_modules
+bower_components/
+/dist
+package-lock.json

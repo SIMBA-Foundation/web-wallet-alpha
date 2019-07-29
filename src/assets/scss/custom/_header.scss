@@ -1,0 +1,104 @@
+/*=================== Header ===================*/
+
+.Blockcloud-toolbar.v-toolbar {
+    box-shadow: $header-box-shadow;
+    .v-toolbar__content {
+        justify-content: space-between;
+        padding: 0;
+        .navbar-left {
+            padding-left: 1rem;
+        }
+        .navbar-right {
+            padding-right: 1.5rem;
+        }
+    }
+    .v-badge.badge--overlap {
+        top: 0;
+        > span {
+            right: -3px;
+            height: 20px;
+            width: 20px;
+            span {
+                padding-top: 2px;
+            }
+        }
+    }
+}
+
+/*=========== Site Logo ============*/
+
+.site-logo {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.625rem; //0 10px;
+}
+
+.v-input__slot {
+    background: transparent !important;
+}
+
+.cart-dropdown {
+    min-width: 320px !important;
+    .dropdown-top {
+        padding: 1rem 1.25rem;
+        border-radius: 0 !important;
+    }
+    .dropdown-content {
+        .v-list__tile {
+            height: auto;
+            padding: 0.625rem;
+            @include border(1px solid, $border-color, bottom);
+            .v-list__tile__action {
+                opacity: 0;
+                transition: opacity 0.3s linear;
+                .v-btn {
+                    margin: 0;
+                }
+            }
+            &:hover {
+                .v-list__tile__action {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/*================== Header Theme Color =================*/
+
+.Blockcloud-toolbar.v-toolbar {
+    &.primary,
+    &.warning,
+    &.success,
+    &.error,
+    &.info {
+        *,
+        .v-text-field__slot input::placeholder {
+            color: $light !important;
+        }
+    }
+}
+
+/*======== Responsive ========*/
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .upgrade-btn,
+    .full-screen {
+        display: none !important;
+    }
+    .Blockcloud-toolbar.v-toolbar .v-toolbar__content {
+        .navbar-left {
+            padding-left: 0.5rem;
+        }
+        .navbar-right {
+            padding-right: 0.5rem;
+        }
+        .v-badge__badge {
+            font-size: 0.875rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            right: 0;
+        }
+    }
+}
