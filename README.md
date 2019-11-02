@@ -6,6 +6,10 @@ This is a free, client-side interface to interact with the Blockcloud blockchain
 
 ## Getting started
 
+### Blockcloud Api Service
+
+This is merely a backend service, which tracks and synchronizes full node data of Blockcloud’s blockchain, and provides JSON-RPC and WebSockets services.
+
 ### Installation
 
 1. **Install Node.js and NPM**: Download Node.js Recommended Version from https://nodejs.org/en/download/ and install it on your system. NPM comes bundled with Node.js.
